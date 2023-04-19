@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Personal Details</h2>
+      <form action="" method="post">
+        <!-- <div>
+          FirstName: <input type="text" /> &nbsp; LastName:
+          <input type="text" />
+        </div>
+        <div>Date of Birth: <input type="date" /></div> -->
+
+        
+        <div class="name1">
+          <label for="name">Name:</label>
+          <input type="text" id="name" placeholder="Name" pattern="[a-zA-Z ]{4,50}" required />
+        </div>
+        
+        <!-- <div class="birth1">
+          <label for="Birth">Date Of Birth:</label>
+          <input type="date" id="Birth" placeholder="" required />
+        </div> -->
+        <div class="birth1">
+          <label for="Birth">Date Of Birth:</label>
+          <input type="text" id="Birth" placeholder="dd-mm-yyyy" required />
+        </div>
+<!--         
+        <script>
+          const birthInput = document.getElementById('Birth');
+        
+          birthInput.addEventListener('blur', function() {
+            let enteredDate = birthInput.value;
+            const regex = /^(\d{1,2})-(\d{1,2})-(\d{4})$/;
+            const match = enteredDate.match(regex);
+        
+            if (!match) {
+              alert('Invalid date format. Please enter a date in the format dd-mm-yyyy.');
+              birthInput.value = '';
+              return;
+            }
+        
+            let day = parseInt(match[1]);
+            let month = parseInt(match[2]);
+            const year = parseInt(match[3]);
+        
+            // Add leading zeros to day and month if necessary
+            day = day < 10 ? `0${day}` : day;
+            month = month < 10 ? `0${month}` : month;
+        
+            const currentDate = new Date();
+            const enteredDateObj = new Date(year, month - 1, day);
+        
+            if (enteredDateObj > currentDate) {
+              alert('Please enter a date in the past.');
+              birthInput.value = '';
+              return;
+            }
+        
+            enteredDate = `${day}-${month}-${year}`;
+            birthInput.value = enteredDate;
+          });
+        </script> -->
+        
+        
+        
+        <div class="mail1">
+          <label for="mail">Email:</label>
+          <input type="email" id="mail" placeholder="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required />
+        </div>
+        
+        <div class="fname1">
+          <label for="father">Father's Name:</label>
+          <input type="text" id="father" placeholder="Name" pattern="[a-zA-Z ]{4,50}" required />
+        </div>
+        
+        <div class="mname1">
+          <label for="mother">Mother's Name:</label>
+          <input type="text" id="mother" placeholder="Name" pattern="[a-zA-Z ]{4,50}" required />
+        </div>
+        
+
+      <div class="gender1">
+        <label for="gender"> Gender:</label> <br />
+        <input type="radio" id="gender" name="gender" value="male" /> Male    
+        <input type="radio" id="gender" name="gender" value="female" /> Female
+      </div>
+        
+      <div class="nationality1">
+        <label for="nationality">Nationality:</label>
+        <input type="text" id="nationality" />
+      </div>
+
+      <div class="address1">
+        <label for="address">Home Address:</label>
+        <input type="text" id="address" placeholder="Street Address" />
+        <input type="text" id="address" placeholder="City" />
+      </div>
+
+      <div class="country1">
+        <label for="country">Country</label>
+        <select name="con" id="country">
+          <option value="ind">India</option>
+          <option value="ind">USA</option>
+          <option value="ind">UK</option>
+          <option value="ind">Russia</option>
+          <option value="ind">Switerland</option>
+          <option value="ind">Australia</option>
+        </select>
+      </div>
+      <div class="contact1">
+        <label for="home-contact">Telephone-Home:</label>
+        <input type="tel" id="home-contact" placeholder="##########" pattern="[0-9]{10}" required />
+      </div>
+      
+      <div class="contact2">
+        <label for="mobile-contact">Telephone-Mobile:</label>
+        <input type="tel" id="mobile-contact" placeholder="##########" pattern="[0-9]{10}" required />
+      </div>
+      
+   
+      
+      <h2>Education Details</h2>
+
+      
+
+        <div class="instituteName">
+          <label for="institute">HSC institute name:</label>
+          <input type="text"  id="institute" placeholder="Name" />
+        </div>
+
+          <div class="boardName">
+            <label for="boardHSC">HSC board</label>
+            <select name="boardN" id="boardHSC">
+              <option value="ind">CBSE</option>
+              <option value="pak">ICSE</option>
+              <option value="aus">State board</option>
+            </select>
+          </div>
+
+          <div class="scoreHSC">
+            <label for="score">Score in HSC:</label>
+            <input type="text" id="score" placeholder="in percentage" pattern="\d{1,2}(\.\d{1,2})?" required />
+          </div>
+
+          <div class="instituteName">
+            <label for="institute2">SSC institute name:</label>
+            <input type="text" id="institute2" placeholder="Name" />
+          </div>
+
+
+          <div class="boardName">
+            <label for="boardSSC">SSC board</label>
+            <select name="boardN" id="boardSSC">
+              <option value="ind">CBSE</option>
+              <option value="pak">ICSE</option>
+              <option value="aus">State board</option>
+            </select>
+          </div>
+
+          <div class="scoreSSC">
+            <label for="score2">Score in SSC:</label>
+            <input type="number" id="score2" placeholder="in percentage" />
+          </div>
+
+          <div class="currentEducation">
+            <label for="education">Currently pursuing:</label>
+            <input type="text" id="education" placeholder=" Course Name" />
+          </div>
+
+          <div class="currentEducationInstitution">
+            <label for="educationInstitution">Current education institution name:</label>
+            <input type="text" id="educationInstitution" placeholder="Education institution name" />
+          </div>
+
+          <div class="overallMark">
+            <label for="overallPercentage">Overall Percentage:</label>
+            <input type="number" id="overallPercentage" placeholder="in percentage" />
+          </div>
+
+          <div class="class2">
+            <label for="backlog">Current backlogs if any</label>
+            <select name="backlogsCurrent" id="backlog">
+              <option value="ind">0</option>
+              <option value="pak">1</option>
+              <option value="aus">More</option>
+            </select>
+          </div>
+
+            <h2>Uploading the documents</h2>
+
+            <div class="class2">
+            <label for="passport">Passport size Photograph:</label>
+            <input type="file" accept=".jpg,.jpeg" maxlength="4194304" id="passport" name="myfile" required>
+          </div>
+
+          <div class="class3">
+            <label for="markHSC">HSC mark sheet:</label>
+            <input type="file" accept=".jpg,.jpeg,.pdf,.docs" maxlength="4194304" id="markHSC" name="myfile">
+          </div>
+
+          <div class="class4">
+            <label for="markSSC">SSC mark sheet:</label>
+            <input type="file" accept=".jpg,.jpeg,.pdf,.docs" maxlength="4194304" id="markSSC" name="myfile">
+          </div>
+          
+          <div class="class5">
+            <label for="markSem">ALL semester mark sheet in a single PDF or docs:</label>
+            <input type="file" accept=".pdf,.docs" maxlength="4194304" id="markSem" name="myfile">
+          </div>
+
+          <div class="class6">
+            <input type="submit" > 
+          </div>
+      </form>
+    </div>
+
+   <script src="script.js"></script>
+  </body>
+</html>
